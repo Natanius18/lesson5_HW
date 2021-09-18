@@ -7,11 +7,6 @@ public class BankAccountManager {
     private int currentAmount = 0;
     private int maxAmount = 10;
 
-    public BankAccount[] getAccounts() {
-        return accounts;
-    }
-
-
     public BankAccount addBankAccount(long balance, Person owner) {
         BankAccount bankAccount = new BankAccount(balance, owner);
         if (maxAmount - currentAmount == 1) {
@@ -98,6 +93,10 @@ public class BankAccountManager {
                 recipient.addTransaction(amount + "$ were received from " + sender.getOwner().getName());
             }
         }
-
     }
+
+    public BankAccount[] getAccounts() {
+        return accounts;
+    }
+
 }

@@ -7,31 +7,8 @@ import java.util.UUID;
 public class BankAccount {
     private final String id;
     private int transactionCounter = 0;
-
-    public int getTransactionCounter() {
-        return transactionCounter;
-    }
-
-    public void setTransactionCounter(int transactionCounter) {
-        this.transactionCounter = transactionCounter;
-    }
-
-    public String getId() {
-        return id;
-    }
-
     private long balance;
-
     private String[] transactionsHistory;
-
-    public String[] getTransactionsHistory() {
-        return transactionsHistory;
-    }
-
-    void setTransactionsHistory(String[] transactionsHistory) {
-        this.transactionsHistory = transactionsHistory;
-    }
-
     public final Person owner;
 
     BankAccount(long balance, Person owner) {
@@ -45,20 +22,40 @@ public class BankAccount {
         return UUID.randomUUID().toString();
     }
 
-    public long getBalance() {
-        return balance;
-    }
-
-    void setBalance(long balance) {
-        this.balance = balance;
-    }
-
     public void addTransaction(String transaction){
         if(transactionCounter == 5){
             transactionCounter = 0;
         }
         transactionsHistory[transactionCounter] = transaction;
         transactionCounter++;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public int getTransactionCounter() {
+        return transactionCounter;
+    }
+
+    public void setTransactionCounter(int transactionCounter) {
+        this.transactionCounter = transactionCounter;
+    }
+
+    public long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
+    public String[] getTransactionsHistory() {
+        return transactionsHistory;
+    }
+
+    public void setTransactionsHistory(String[] transactionsHistory) {
+        this.transactionsHistory = transactionsHistory;
     }
 
     public Person getOwner() {
