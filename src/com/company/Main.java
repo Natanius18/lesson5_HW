@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.Person;
 import com.company.bank.BankAccount;
 import com.company.bank.BankAccountManager;
 
@@ -27,29 +26,24 @@ public class Main {
 
         BankAccountManager bankAccountManager = new BankAccountManager();
 
-        BankAccount bankAccount8 = bankAccountManager.createBankAccount(150, pers8);
-        BankAccount bankAccount9 = bankAccountManager.createBankAccount(0, pers9);
-        BankAccount bankAccount10 = bankAccountManager.createBankAccount(0, pers10);
-        BankAccount bankAccount11 = bankAccountManager.createBankAccount(0, pers11);
-        BankAccount bankAccount12 = bankAccountManager.createBankAccount(0, pers12);
+        BankAccount bankAccount8 = bankAccountManager.addBankAccount(150, pers8);
+        BankAccount bankAccount9 = bankAccountManager.addBankAccount(0, pers9);
 
-        bankAccountManager.addBankAccount(bankAccount8);
-        bankAccountManager.addBankAccount(bankAccount9);
-        bankAccountManager.addBankAccount(bankAccount10);
-        bankAccountManager.addBankAccount(bankAccount11);
-        bankAccountManager.addBankAccount(bankAccount12);
-
-
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers1));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers2));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers3));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers4));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers5));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers6));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers7));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers13));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers14));
-        bankAccountManager.addBankAccount(bankAccountManager.createBankAccount(0, pers15));
+        bankAccountManager.addBankAccount(0, pers1);
+        bankAccountManager.addBankAccount(0, pers2);
+        bankAccountManager.addBankAccount(0, pers3);
+        bankAccountManager.addBankAccount(0, pers4);
+        bankAccountManager.addBankAccount(0, pers5);
+        bankAccountManager.addBankAccount(0, pers6);
+        bankAccountManager.addBankAccount(0, pers7);
+        bankAccountManager.addBankAccount(150, pers8);
+        bankAccountManager.addBankAccount(0, pers9);
+        bankAccountManager.addBankAccount(0, pers10);
+        bankAccountManager.addBankAccount(0, pers11);
+        bankAccountManager.addBankAccount(0, pers12);
+        bankAccountManager.addBankAccount(0, pers1);
+        bankAccountManager.addBankAccount(0, pers1);
+        bankAccountManager.addBankAccount(0, pers15);
 
         System.out.println(bankAccount8.getId());
         System.out.println(bankAccountManager.findBankAccountById(bankAccount8.getId()).getId());

@@ -12,10 +12,8 @@ public class BankAccountManager {
     }
 
 
-    public BankAccount createBankAccount(long balance, Person owner){
-        return new BankAccount(balance, owner);
-    }
-    public BankAccount addBankAccount(BankAccount bankAccount) {
+    public BankAccount addBankAccount(long balance, Person owner) {
+        BankAccount bankAccount = new BankAccount(balance, owner);
         if (maxAmount - currentAmount == 1) {
             System.out.println("New mass!!!!!!!!");
             maxAmount = currentAmount + 5;
